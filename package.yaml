@@ -1,0 +1,54 @@
+name:                Omnomnivore
+version:             0.1.0.0
+github:              "ners/Omnomnivore"
+license:             Apache-2.0
+author:              "ners"
+maintainer:          "ners@gmx.ch"
+copyright:           "2020 ners"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/ners/Omnomnivore#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- dimensional
+- greskell
+- greskell-core
+- greskell-websocket
+- safe-exceptions
+- text
+
+library:
+  source-dirs: src
+
+executables:
+  Omnomnivore-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - Omnomnivore
+
+tests:
+  Omnomnivore-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - Omnomnivore
