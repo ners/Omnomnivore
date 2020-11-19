@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0165f55e6e30365f53710c2ef82bb65511c358ee99643bb88257f187a4904ff2
+-- hash: 567f81182bb8192d4418968f825fe9e68b03aee798c07adbd810da42f5271fa5
 
 name:           Omnomnivore
 version:        0.1.0.0
@@ -15,7 +15,6 @@ author:         ners
 maintainer:     ners@gmx.ch
 copyright:      2020 ners
 license:        Apache-2.0
-license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
@@ -33,7 +32,8 @@ library
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , dimensional
     , greskell
     , greskell-core
@@ -51,6 +51,7 @@ executable Omnomnivore-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       Omnomnivore
+    , aeson
     , base >=4.7 && <5
     , dimensional
     , greskell
@@ -70,6 +71,7 @@ test-suite Omnomnivore-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       Omnomnivore
+    , aeson
     , base >=4.7 && <5
     , dimensional
     , greskell

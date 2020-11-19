@@ -27,6 +27,7 @@ dependencies:
 - greskell-websocket
 - safe-exceptions
 - text
+- aeson
 
 library:
   source-dirs: src
