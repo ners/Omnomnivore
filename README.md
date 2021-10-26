@@ -23,7 +23,7 @@ A category is an ingredient that is not concrete, but rather presents a choice b
 For example: "bread" can be fulfilled by "white bread", "black bread", "full-corn bread", "body of Christ", ...
 A category must be resolved by the user.
 All ingredients under a category must share the same quantification, which is also the quantification of the category.
-No, we do not support continous eggs.
+No, we do not support continuous eggs.
 
 ## Ingredient (node)
 An ingredient is a resource that is consumed by steps, and also produced by steps.
