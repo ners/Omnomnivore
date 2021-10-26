@@ -1,11 +1,15 @@
-{ mkDerivation, base, lib }:
+{ mkDerivation, base, greskell, greskell-core, greskell-websocket
+, lib, mtl, text
+}:
 mkDerivation {
   pname = "Omnomnivore";
   version = "0.1.0.0";
   src = ./.;
   isLibrary = true;
   isExecutable = true;
-  libraryHaskellDepends = [ base ];
+  libraryHaskellDepends = [
+    base greskell greskell-core greskell-websocket mtl text
+  ];
   executableHaskellDepends = [ base ];
   testHaskellDepends = [ base ];
   homepage = "https://github.com/ners/Omnomnivore";
