@@ -1,4 +1,4 @@
-{ mkDerivation, base, Cabal, greskell, greskell-core
+{ mkDerivation, aeson, base, Cabal, greskell, greskell-core
 , greskell-websocket, lib, mtl, text, text-format
 }:
 mkDerivation {
@@ -8,7 +8,7 @@ mkDerivation {
   isLibrary = true;
   isExecutable = true;
   libraryHaskellDepends = [
-    base greskell greskell-core greskell-websocket mtl text
+    aeson base greskell greskell-core greskell-websocket mtl text
   ];
   executableHaskellDepends = [ base ];
   testHaskellDepends = [ base Cabal text text-format ];

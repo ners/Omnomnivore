@@ -3,8 +3,7 @@
 let
   project = import ./release.nix;
 in
-pkgs.stdenv.mkDerivation {
-  name = "shell";
+pkgs.mkShell {
   buildInputs = project.env.nativeBuildInputs ++ [
     pkgs.boxes
     pkgs.cabal2nix
