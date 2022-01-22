@@ -1,6 +1,10 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 module Main where
 
 import Omnomnivore.Graph
 
 main :: IO ()
-main = putStrLn "Hello, Haskell!"
+main = withGraph "localhost" 8182 "g" $ do
+    client <- askGraphClient
+    return ()

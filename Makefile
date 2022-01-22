@@ -4,7 +4,7 @@ build:
 	cabal build
 
 run:
-	cabal run
+	cabal run Omnomnivore
 
 GRAPHDB_CONTAINER_NAME := janusgraph
 graphdb:
